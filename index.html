@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rey - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      * {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .project-card {
+        transition: all 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .gradient-text {
+        background: linear-gradient(90deg, #3b82f6, #2563eb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Navbar -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm shadow-sm z-50"
+    >
+      <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold gradient-text">Rey</h1>
+        <ul class="flex gap-6 font-medium">
+          <li>
+            <a href="#about" class="hover:text-blue-600 transition-colors"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-blue-600 transition-colors"
+              >Proyek</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-blue-600 transition-colors"
+              >Kontak</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-blue-50 via-white to-gray-50 px-4"
+    >
+      <div class="animate-float">
+        <img
+          src="img/pp.jpg"
+          alt="Profile"
+          class="w-40 h-40 rounded-full shadow-lg mb-6 border-4 border-white"
+        />
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4">
+        Halo, aku <span class="gradient-text">Rey</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-xl mb-8 leading-relaxed">
+        Orang yang gemar memanfaatkan AI untuk mempermudah dan mempercepat
+        proses pembuatan website.
+      </p>
+      <div class="flex gap-4">
+        <a
+          href="#projects"
+          class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:shadow-blue-200 hover:bg-blue-700 transition-all"
+        >
+          Lihat proyek
+        </a>
+        <a
+          href="#contact"
+          class="px-6 py-3 bg-white text-blue-600 rounded-lg shadow-lg hover:shadow-blue-100 transition-all"
+        >
+          Hubungi saya
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-4xl mx-auto py-20 px-4">
+      <h3 class="text-3xl font-bold mb-8 text-center gradient-text">
+        Tentang Saya
+      </h3>
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <p class="text-gray-700 text-lg leading-relaxed text-center">
+          Saya seorang orang yang gemar memanfaatkan AI untuk bereksperimen dan
+          membuat situs web yang ramah pengguna, responsif, dan profesional.
+          Dengan pemahaman yang lumayan tentang HTML, CSS, dan kerangka kerja
+          seperti TailwindCSS, saya selalu termotivasi untuk terus belajar dan
+          berinovasi dalam pengembangan web modern.
+        </p>
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div class="p-4 bg-blue-50 rounded-lg">
+            <h4 class="font-bold text-blue-600">HTML5</h4>
+          </div>
+          <div class="p-4 bg-blue-50 rounded-lg">
+            <h4 class="font-bold text-blue-600">CSS3</h4>
+          </div>
+          <div class="p-4 bg-blue-50 rounded-lg">
+            <h4 class="font-bold text-blue-600">TailwindCSS</h4>
+          </div>
+          <div class="p-4 bg-blue-50 rounded-lg">
+            <h4 class="font-bold text-blue-600">AI Integration</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="py-20 px-4 bg-gradient-to-b from-gray-50 to-gray-100"
+    >
+      <h3 class="text-3xl font-bold mb-12 text-center gradient-text">
+        Proyek Saya
+      </h3>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <!-- Project Cards -->
+        <div
+          class="project-card bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <img
+            src="img/1.png"
+            alt="Project 1"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">So Ramen</h4>
+            <p class="text-gray-600 mb-4">
+              Website profil Perusahaan kedai ramen yang bernama So Ramen.
+            </p>
+            <a
+              href="https://github.com/reyyzukarasu/Soramen"
+              class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
+            >
+              <span>Lihat Kode</span>
+              <svg
+                class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="project-card bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <img
+            src="img/2.png"
+            alt="Project 2"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Bullnium News</h4>
+            <p class="text-gray-600 mb-4">
+              Website portal berita yang merupakan tugas dari PT. Bullnium
+              Blockchain Indonesia.
+            </p>
+            <a
+              href="https://github.com/reyyzukarasu/portal-berita"
+              class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
+            >
+              <span>Lihat Kode</span>
+              <svg
+                class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="project-card bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <img
+            src="img/3.png"
+            alt="Project 3"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Pengelolaan Barang</h4>
+            <p class="text-gray-600 mb-4">
+              Website pengelolaan uang yang memudahkan mengatur uang dari barang
+              yang dijual dan dibeli.
+            </p>
+            <a
+              href="https://github.com/reyyzukarasu/stok-barang"
+              class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
+            >
+              <span>Lihat Kode</span>
+              <svg
+                class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="project-card bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <img
+            src="img/4.png"
+            alt="Project 4"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Toko Kanika Sembako</h4>
+            <p class="text-gray-600 mb-4">
+              Website toko yang dapat mempermudah pembelian online.
+            </p>
+            <a
+              href="https://github.com/reyyzukarasu/toko-kanika-sembako"
+              class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
+            >
+              <span>Lihat Kode</span>
+              <svg
+                class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="project-card bg-white rounded-2xl shadow-lg overflow-hidden relative group"
+        >
+          <!-- Overlay coming soon (default visible, hidden on hover) -->
+          <div
+            class="absolute inset-0 bg-gray-900/90 flex flex-col items-center justify-center z-10 transition-opacity duration-300 group-hover:opacity-0"
+          >
+            <svg
+              class="w-16 h-16 text-gray-400 mb-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <h4 class="text-2xl font-bold text-white mb-2">Coming Soon</h4>
+          </div>
+
+          <!-- Normal content (hidden by default, visible on hover) -->
+          <div
+            class="opacity-50 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <img
+              src="img/5.png"
+              alt="Project 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h4 class="text-xl font-semibold mb-2">Game</h4>
+              <p class="text-gray-600 mb-4">
+                Website game yang terinspirasi dengan game mario.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat for other projects with similar structure -->
+        <!-- [Previous project cards remain the same but with new styling] -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-4xl mx-auto py-20 px-4">
+      <h3 class="text-3xl font-bold mb-8 text-center gradient-text">
+        Kontak Saya
+      </h3>
+      <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+        <p class="text-gray-700 text-lg mb-8">
+          Punya ide menarik tentang proyek AI? Mari kita diskusikan dan wujudkan
+          bersama. Jangan ragu untuk menghubungi saya!
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="mailto:reyyzukarasu4@gmail.com"
+            class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:shadow-blue-200 hover:bg-blue-700 transition-all flex items-center justify-center gap-2"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+              />
+              <path
+                d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+              />
+            </svg>
+            Email
+          </a>
+          <a
+            href="https://github.com/reyyzukarasu"
+            target="_blank"
+            class="px-6 py-3 bg-gray-800 text-white rounded-lg shadow-lg hover:shadow-gray-200 hover:bg-gray-900 transition-all flex items-center justify-center gap-2"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-8 text-center text-gray-600">
+      <p class="text-sm">© 2025 Rey. All rights reserved.</p>
+      <p class="text-xs mt-2 text-gray-500">Made with ❤️ using TailwindCSS</p>
+    </footer>
+  </body>
+</html>
